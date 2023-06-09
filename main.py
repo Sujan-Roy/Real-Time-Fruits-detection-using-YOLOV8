@@ -8,3 +8,7 @@ argparser = argparse.ArgumentParser(description='Simple implementation of Yolov3
 argparser.add_argument('--img', type=str)
 argparser.add_argument('--video', type=str)
 argparser.add_argument('--out', type=str)
+
+args = argparser.parse_args()
+
+confidence, threshold = 0.5, 0.3 
