@@ -17,3 +17,8 @@ labels = open(labelPath).read().strip().split('\n')
 weightsPath = './yolov3-tiny.weights'
 configPath = './yolov3-tiny.cfg'
 net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
+
+layer_names = net.getLayerNames()
+yolo_layers = []
+for i in net.getUnconnectedOutLayers():
+    yolo_layers.append(layer_names[i[0] - 1])
