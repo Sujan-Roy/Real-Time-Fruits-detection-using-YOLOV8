@@ -14,9 +14,11 @@ confidence, threshold = 0.5, 0.3
 labelPath = './obj.names'
 labels = open(labelPath).read().strip().split('\n')
 
+
 weightsPath = './yolov3-tiny.weights'
 configPath = './yolov3-tiny.cfg'
 net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
+
 
 layer_names = net.getLayerNames()
 yolo_layers = []
