@@ -24,3 +24,4 @@ layer_names = net.getLayerNames()
 yolo_layers = []
 for i in net.getUnconnectedOutLayers():
     yolo_layers.append(layer_names[i[0] - 1])
+def img_draw(img, boxes, confidences, classids, idxs, labels):
